@@ -47,4 +47,18 @@ describe('Definition') do
       expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it('saves input to the .all array') do
+      test_def = Definition.new('crapshoot')
+      expect(test_def.save()).to(eq(['crapshoot']))
+    end
+  end
+
+  describe('.clear') do
+    it('empties the array') do
+      expect(Definition.clear()).to(eq([]))
+    end
+  end
+
 end
