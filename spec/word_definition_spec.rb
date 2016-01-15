@@ -30,6 +30,16 @@ describe('Word') do
       expect(Word.clear()).to(eq([]))
     end
   end
+
+  describe('#id') do
+    it('ties word arrays to a unique identification number') do
+      test_word = Word.new('fallow')
+      test_word.save()
+      test_word2 = Word.new('cultivate')
+      test_word2.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 end
 
 ##############################-Definition-##############################
