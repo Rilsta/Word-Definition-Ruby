@@ -70,8 +70,9 @@ describe('Definition') do
 
   describe('#save') do
     it('saves input to the .all array') do
-      test_def = Definition.new('crapshoot')
-      expect(test_def.save()).to(eq(['crapshoot']))
+      test_def = Definition.new('Informal. anything unpredictable, risky, or problematical; gamble.')
+      test_def.save
+      expect(Definition.all()).to(eq([test_def]))
     end
   end
 

@@ -14,7 +14,7 @@ class Definition
   end
 
   define_method(:save) do
-    @@definitions.push(@new_def)
+    @@definitions.push(self)
   end
 
   define_singleton_method(:clear) do
