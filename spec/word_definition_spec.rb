@@ -9,6 +9,13 @@ describe('Word') do
       expect(test_word.new_word()).to(eq('susurrus'))
     end
   end
+
+  describe('.all') do
+    it('returns an empty array') do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
 end
 
 describe('Definition') do
