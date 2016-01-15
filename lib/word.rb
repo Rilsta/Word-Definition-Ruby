@@ -1,13 +1,13 @@
 class Word
   @@new_words = []
 
-  define_method(:initialize) do |new_word|
-    @new_word = new_word
+  define_method(:initialize) do |name|
+    @name = name
     @id = @@new_words.length + 1
   end
 
-  define_method(:new_word) do
-    @new_word
+  define_method(:name) do
+    @name
   end
 
   define_singleton_method(:all) do
@@ -28,9 +28,9 @@ class Word
 
   define_singleton_method(:find) do |identification|
     found_item = nil
-    @@new_words.each() do |new_word|
-      if new_word.id() == identification.to_i
-        found_item = new_word
+    @@new_words.each() do |name|
+      if name.id() == identification.to_i
+        found_item = name
       end
     end
     found_item

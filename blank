@@ -1,0 +1,3 @@
+<% @new_words.each() do |new_word| %>
+  <li><%= new_word.name() %></li>
+<% end %>

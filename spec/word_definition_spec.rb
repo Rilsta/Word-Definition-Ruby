@@ -5,10 +5,14 @@ require('definition')
 ##############################-Word-##############################
 
 describe('Word') do
-  describe('#new_word') do
+  before() do
+    Word.clear()
+  end
+
+  describe('#name') do
     it('returns the word entered') do
       test_word = Word.new('susurrus')
-      expect(test_word.new_word()).to(eq('susurrus'))
+      expect(test_word.name()).to(eq('susurrus'))
     end
   end
 

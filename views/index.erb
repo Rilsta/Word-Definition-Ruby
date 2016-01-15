@@ -1,8 +1,14 @@
 <h1>Words</h1>
 
-<h3><a href="/word_form/new">Add a Word</a></h3>
 <h4>Here is your word list:</h4>
+  <ul>
+    <% @new_words.each() do |new_word| %>
+      <li><%= new_word.name() %></li>
+    <% end %>
+  </ul>
 
-<ul>
-
-</ul>
+<h3>Enter in a Word</h3>
+  <form action="/" method="post">
+    <input type="text" name="word_name" id="word_name">
+    <button type="submit" name="button">Submit</button>
+  </form>
