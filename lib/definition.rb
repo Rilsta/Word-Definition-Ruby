@@ -1,12 +1,12 @@
 class Definition
   @@definitions = []
 
-  define_method(:initialize) do |new_def|
-    @new_def = new_def
+  define_method(:initialize) do |def_name|
+    @def_name = def_name
   end
 
-  define_method(:new_def) do
-    @new_def
+  define_method(:def_name) do
+    @def_name
   end
 
   define_singleton_method(:all) do

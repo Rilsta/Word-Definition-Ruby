@@ -1,1 +1,15 @@
-<h1>Word</h1>
+<h1>Definition</h1>
+
+<h4>Definitions:</h4>
+
+<ul>
+    <% @word.definitions.each() do |new_def| %>
+    <li><%= new_def.def_name() %></li>
+    <% end %>
+</ul>
+
+<h3>Enter in a Definition</h3>
+  <form action="/word/<%= @word.id() %>" method="post">
+    <input type="text" name="def_name" id="def_name">
+    <button type="submit" name="button">Submit</button>
+  </form>

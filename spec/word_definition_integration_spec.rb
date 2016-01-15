@@ -16,7 +16,7 @@ describe('word/definition pathways', {:type => :feature}) do
     it('routes to definition page from word list link') do
       visit('/')
       click_link('fallow')
-      expect(page).to(have_content('Word'))
+      expect(page).to(have_content('Definition'))
     end
   end
 end

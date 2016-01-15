@@ -4,6 +4,11 @@ class Word
   define_method(:initialize) do |name|
     @name = name
     @id = @@new_words.length + 1
+    @definitions = []
+  end
+
+  define_method(:definitions) do
+    @definitions
   end
 
   define_method(:name) do
