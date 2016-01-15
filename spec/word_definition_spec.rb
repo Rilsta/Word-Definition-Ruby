@@ -21,25 +21,34 @@ describe('Word') do
   describe('#save') do
     it('saves input to the .all array') do
       test_word = Word.new('crapshoot')
-      expect(test_word.save()).to(eq(['crapshoot']))
+      test_word.save
+      expect(Word.all()).to(eq([test_word]))
     end
   end
 
-  describe('.clear') do
-    it('empties the array') do
-      expect(Word.clear()).to(eq([]))
-    end
-  end
+  # describe('.clear') do
+  #   it('empties the array') do
+  #     expect(Word.clear()).to(eq([]))
+  #   end
+  # end
 
-  describe('#id') do
-    it('ties word arrays to a unique identification number') do
-      test_word = Word.new('fallow')
-      test_word.save()
-      test_word2 = Word.new('cultivate')
-      test_word2.save()
-      expect(test_word.id()).to(eq(1))
-    end
-  end
+  # describe('#id') do
+  #   it('ties word arrays to a unique identification number') do
+  #     test_word = Word.new('fallow')
+  #     expect(test_word.id()).to(eq(1))
+  #   end
+  # end
+  #
+  # describe('.find') do
+  #   it('finds a word based on id number') do
+  #     test_word = Word.new('fallow')
+  #     test_word.save()
+  #     test_word2 = Word.new('conniption')
+  #     test_word2.save()
+  #     expect(Word.find(test_word.id())).to(eq(test_word))
+  #   end
+  # end
+
 end
 
 ##############################-Definition-##############################
