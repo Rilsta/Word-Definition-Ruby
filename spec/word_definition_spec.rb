@@ -25,4 +25,9 @@ describe('Definition') do
       expect(test_def.new_def()).to(eq('a soft murmuring or rustling sound; whisper.'))
     end
   end
+  describe('.all') do
+    it('returns an empty array') do
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end
