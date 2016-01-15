@@ -3,7 +3,7 @@
 <h4>Here is your word list:</h4>
   <ul>
     <% @new_words.each() do |new_word| %>
-      <li><%= new_word.name() %></li>
+      <li><a href="/word/<%= new_word.id() %>"><%= new_word.name() %></a></li>
     <% end %>
   </ul>
 

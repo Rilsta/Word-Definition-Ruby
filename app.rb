@@ -15,3 +15,7 @@ post('/') do
   new_word.save()
   erb(:success)
 end
+
+get('/word/:id') do
+  erb(:word)
+end
