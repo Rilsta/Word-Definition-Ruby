@@ -16,6 +16,12 @@ describe('Word') do
     end
   end
 
+  describe('#save') do
+    it('saves input to the .all array') do
+      test_word = Word.new('crapshoot')
+      expect(test_word.save()).to(eq(['crapshoot']))
+    end
+  end
 end
 
 describe('Definition') do
@@ -25,6 +31,7 @@ describe('Definition') do
       expect(test_def.new_def()).to(eq('a soft murmuring or rustling sound; whisper.'))
     end
   end
+
   describe('.all') do
     it('returns an empty array') do
       expect(Definition.all()).to(eq([]))

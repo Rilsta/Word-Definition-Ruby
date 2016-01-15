@@ -13,4 +13,8 @@ class Word
     @@new_words
   end
 
+  define_method(:save) do
+    @@new_words.push(@new_word)
+  end
+
 end
