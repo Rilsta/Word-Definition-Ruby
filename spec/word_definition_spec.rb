@@ -2,6 +2,8 @@ require('rspec')
 require('word')
 require('definition')
 
+##############################-Word-##############################
+
 describe('Word') do
   describe('#new_word') do
     it('returns the word entered') do
@@ -22,7 +24,15 @@ describe('Word') do
       expect(test_word.save()).to(eq(['crapshoot']))
     end
   end
+
+  describe('.clear') do
+    it('empties the array') do
+      expect(Word.clear()).to(eq([]))
+    end
+  end
 end
+
+##############################-Definition-##############################
 
 describe('Definition') do
   describe('#new_def') do
