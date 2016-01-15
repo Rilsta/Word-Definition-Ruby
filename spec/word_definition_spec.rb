@@ -59,10 +59,13 @@ end
 ##############################-Definition-##############################
 
 describe('Definition') do
-  describe('#definition') do
+  before() do
+    Definition.clear()
+  end
+  describe('#def_name') do
     it('returns the definition entered') do
       test_def = Definition.new('a soft murmuring or rustling sound; whisper.')
-      expect(test_def.definition()).to(eq('a soft murmuring or rustling sound; whisper.'))
+      expect(test_def.def_name()).to(eq('a soft murmuring or rustling sound; whisper.'))
     end
   end
 
